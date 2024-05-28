@@ -1,4 +1,4 @@
-import "./UploadButton.scss";
+import "./Button.scss";
 
 function UploadButton() {
   return (

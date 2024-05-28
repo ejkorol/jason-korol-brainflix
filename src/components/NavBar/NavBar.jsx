@@ -2,7 +2,7 @@ import './NavBar.scss';
 
 import Logo from "@/components/Logo/Logo";
 import Search from "@/components/Search/Search";
-import UploadButton from "@/components/UploadButton/UploadButton";
+import Button from "@/components/Button/Button";
 import Avatar from "@/components/Avatar/Avatar";
 
 function NavBar() {
@@ -11,7 +11,7 @@ function NavBar() {
     <header>
       <Logo />
       <Search />
-      <UploadButton />
+      <Button />
       <Avatar />
     </header>
   )
