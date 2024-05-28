@@ -1,9 +1,9 @@
 import './NavBar.scss';
 
-import Logo from "../Logo/Logo";
-import Search from "../Search/Search";
-import UploadButton from "../UploadButton/UploadButton";
-import Avatar from "../Avatar/Avatar";
+import Logo from "@/components/Logo/Logo";
+import Search from "@/components/Search/Search";
+import UploadButton from "@/components/UploadButton/UploadButton";
+import Avatar from "@/components/Avatar/Avatar";
 
 function NavBar() {
 

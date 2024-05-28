@@ -1,8 +1,9 @@
 import "./Avatar.scss";
+import userAvatar from "@/assets/images/Mohan-muruge.jpg"
 
 function Avatar () {
   return (
-    <img src="../../assets/images/Mohan-muruge.jpg" />
+    <img src={userAvatar} alt="User Avatar" />
   )
 };
 
