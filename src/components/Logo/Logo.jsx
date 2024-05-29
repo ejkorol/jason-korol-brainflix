@@ -1,8 +1,13 @@
+import "./Logo.scss";
+
+/* ICONS */
 import logo from "@/assets/logo/BrainFlix-logo.svg"
 
 function Logo () {
   return (
-    <img src={logo} className="header__logo" />
+    <div className="header__logo-wrapper">
+      <img src={logo} className="header__logo" />
+    </div>
   )
 };
 
