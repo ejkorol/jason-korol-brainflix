@@ -4,11 +4,12 @@
 .header {
   &__search {
     order: 2;
+    flex-grow: 1;
     background-image: url('@/assets/icons/search.svg');
     background-repeat: no-repeat;
-    background-position: 0.5rem;
+    background-position: 0.75rem;
     height: 2.5rem;
-    padding-left: 2.5rem;
+    padding: 1.5rem 2.5rem;
     background-color: $alabaster;
     border: solid 0.063rem $mercury;
     border-radius: 0.25rem;
