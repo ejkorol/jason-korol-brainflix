@@ -2,5 +2,23 @@
 @use "@/styles/partials/mixins" as *;
 
 .button {
+  position: relative;
+  margin: 0;
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  border-style: none;
+  height: 2.5rem; // 40px
+  border-radius: 0.25rem; // 4px
   background-color: $bf-blue;
+  &__icon {
+    left: 0;
+    padding-left: 0.5rem;
+    position: absolute;
+  }
+  &__text {
+    @include typography($text-sm, 600, $white, $text-sm, none, uppercase);
+  }
 }
