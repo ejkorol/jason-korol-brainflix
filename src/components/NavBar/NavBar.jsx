@@ -12,7 +12,7 @@ import uploadIcon from "@/assets/icons/upload.svg";
 function NavBar() {
 
   return (
-    <header>
+    <header className="header">
       <Logo />
       <Search />
       <Button icon={uploadIcon} text="upload" />
