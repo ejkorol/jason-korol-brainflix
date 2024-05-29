@@ -1,0 +1,15 @@
+@use "@/styles/partials/variables" as *;
+@use "@/styles/partials/mixins" as *;
+
+.header {
+  &__logo-wrapper {
+    order: 1;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  &__logo {
+
+  }
+}

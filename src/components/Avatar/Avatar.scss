@@ -1,5 +1,6 @@
 .header {
   &__avatar {
+    order: 3;
     height: 2.5rem; // 40px
     width: 2.5rem; // 40px
     object-fit: cover;

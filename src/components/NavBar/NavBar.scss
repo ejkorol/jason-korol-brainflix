@@ -1,2 +1,8 @@
 @use "@/styles/partials/variables" as *;
 @use "@/styles/partials/mixins" as *;
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
