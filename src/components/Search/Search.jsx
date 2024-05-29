@@ -2,7 +2,7 @@ import "./Search.scss";
 
 function Search () {
   return (
-    <input type="search" placeholder="Search" />
+    <input className="header__search" type="search" placeholder="Search" />
   )
 };
 
