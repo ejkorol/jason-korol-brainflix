@@ -3,7 +3,7 @@ import userAvatar from "@/assets/images/Mohan-muruge.jpg"
 
 function Avatar () {
   return (
-    <img src={userAvatar} alt="User Avatar" />
+    <img src={userAvatar} alt="User Avatar" className="header__avatar" />
   )
 };
 
