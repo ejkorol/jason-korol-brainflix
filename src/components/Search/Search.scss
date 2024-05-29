@@ -1,0 +1,21 @@
+@use "@/styles/partials/variables" as *;
+@use "@/styles/partials/mixins" as *;
+
+.header {
+  &__search {
+    order: 2;
+    flex-grow: 1;
+    background-image: url('@/assets/icons/search.svg');
+    background-repeat: no-repeat;
+    background-position: 0.75rem;
+    height: 2.5rem;
+    padding: 1.5rem 2.5rem;
+    background-color: $alabaster;
+    border: solid 0.063rem $mercury;
+    border-radius: 0.25rem;
+    @include typography($text-sm, 400, $bf-black, $text-sm, none, capitalize);
+    &::placeholder {
+      @include typography($text-sm, 400, $bf-black, $text-sm, none, capitalize);
+    }
+  }
+}

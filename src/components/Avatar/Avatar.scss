@@ -1,0 +1,11 @@
+.header {
+  &__avatar {
+    order: 3;
+    height: 3.125rem; // 40px
+    width: 3.125rem; // 40px
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-left: 1rem;
+  }
+}

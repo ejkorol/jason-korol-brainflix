@@ -1,2 +1,7 @@
-@use "./variables";
-@use "./mixins";
+/* ****************************** */
+/*         GLOBAL RESETS          */
+/* ****************************** */
+body {
+  margin: 0;
+  padding: 0;
+}
