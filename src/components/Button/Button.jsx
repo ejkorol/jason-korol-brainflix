@@ -1,8 +1,15 @@
 import "./Button.scss";
 
-function UploadButton() {
+function UploadButton({ icon, text }) {
   return (
-    <button>upload</button>
+    <button className="button">
+      <span className="button__icon">
+        <img src={icon}/>
+      </span>
+      <span className="button__text">
+        <p>{ text }</p>
+      </span>
+    </button>
   )
 };
 
