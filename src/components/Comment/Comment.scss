@@ -1,3 +1,35 @@
 @use "@/styles/partials/variables" as *;
 @use "@/styles/partials/mixins" as *;
 @use "@/styles/partials/globals" as *;
+
+.comment {
+  display: flex;
+  margin-top: 1rem;
+  border-top: 1px solid $mercury;
+  padding: 1rem 0;
+  &__image-wrapper {
+    margin-right: 1rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__body {
+    margin-top: 0.5rem;
+  }
+  &__text {
+    margin: 0;
+    @include typography($text-rg, 400, $bf-black, $text-xl, none, none);
+    &--bold {
+      font-weight: 600;
+    }
+    &--light {
+      color: $silver;
+    }
+  }
+}
