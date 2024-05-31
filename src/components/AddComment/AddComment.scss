@@ -1,3 +1,35 @@
 @use "@/styles/partials/variables" as *;
 @use "@/styles/partials/mixins" as *;
 @use "@/styles/partials/globals" as *;
+
+.add-comment {
+  display: flex;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  &__image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 1rem 0 0;
+  }
+  &__label {
+    @include typography($text-rg, 600, $silver, $text-rg, none, uppercase);
+    margin-bottom: 1rem;
+  }
+  &__textarea {
+    background-color: $alabaster;
+    border-radius: 0.25rem;
+    border: 1px solid $mercury;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    @include typography($text-rg, 400, $bf-black, $text-rg, none, none);
+    &::placeholder {
+      @include typography($text-rg, 400, $bf-black, $text-rg, none, none);
+    }
+    &:focus {
+      border: 2px solid $bf-blue;
+    }
+  }
+}
