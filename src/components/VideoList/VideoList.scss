@@ -1,3 +1,10 @@
 @use "@/styles/partials/variables" as *;
 @use "@/styles/partials/mixins" as *;
 @use "@/styles/partials/globals" as *;
+
+.video-list {
+  padding: 1rem 1rem 2.5rem 1rem;
+  &__header {
+    @include typography($text-rg, 600, $silver, $text-rg, none, uppercase);
+  }
+}
