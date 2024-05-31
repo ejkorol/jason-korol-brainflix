@@ -3,14 +3,14 @@ import "./VideoComments.scss";
 
 /* COMPONENTS */
 import AddComment from "@/components/AddComment/AddComment";
-import CommentsFeed from "@/components/CommentsFeed/CommentsFeed";
+import Comment from "@/components/Comment/Comment";
 
 function VideoComments() {
   return (
     <section className="video-comments">
       <p>3 Comments</p>
       <AddComment />
-      <CommentsFeed />
+      <Comment />
     </section>
   )
 };
