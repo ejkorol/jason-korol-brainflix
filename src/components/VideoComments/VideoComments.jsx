@@ -7,7 +7,7 @@ import CommentsFeed from "@/components/CommentsFeed/CommentsFeed";
 
 function VideoComments() {
   return (
-    <section>
+    <section className="video-comments">
       <p>3 Comments</p>
       <AddComment />
       <CommentsFeed />
