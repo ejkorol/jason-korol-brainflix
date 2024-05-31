@@ -8,7 +8,7 @@ import Comment from "@/components/Comment/Comment";
 function VideoComments() {
   return (
     <section className="video-comments">
-      <p>3 Comments</p>
+      <p className="video-comments__text video-comments__text--bold">3 Comments</p>
       <AddComment />
       <Comment />
     </section>
