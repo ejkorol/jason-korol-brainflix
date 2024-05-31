@@ -1,3 +1,29 @@
 @use "@/styles/partials/variables" as *;
 @use "@/styles/partials/mixins" as *;
 @use "@/styles/partials/globals" as *;
+
+.video-snippet {
+  display: flex;
+  &__image-wrapper {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  &__image {
+    width: 100%;
+    border-radius: 0.25rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__text {
+    margin: 0;
+    @include typography($text-rg, 400, $bf-black, $text-rg, none, capitalize);
+    &--bold {
+      font-weight: 600;
+    }
+  }
+}
