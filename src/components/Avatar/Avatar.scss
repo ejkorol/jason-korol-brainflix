@@ -1,3 +1,5 @@
+@use "@/styles/partials/variables" as *;
+
 .header {
   &__avatar {
     order: 3;
@@ -6,5 +8,8 @@
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
+    &--placeholder {
+      background: $mercury;
+    }
   }
 }

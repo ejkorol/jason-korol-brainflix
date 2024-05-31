@@ -1,4 +1,6 @@
+/* STYLES */
 import './NavBar.scss';
+import userAvatar from "@/assets/images/Mohan-muruge.jpg"
 
 /* COMPONENTS */
 import Logo from "@/components/Logo/Logo";
@@ -16,7 +18,7 @@ function NavBar() {
       <Logo />
       <Search />
       <Button icon={uploadIcon} text="upload" />
-      <Avatar />
+      <Avatar image={userAvatar} />
     </header>
   )
 

@@ -1,5 +1,6 @@
 /* STYLES */
 import "./AddComment.scss";
+import userAvatar from "@/assets/images/Mohan-muruge.jpg"
 
 /* ICONS */
 import addCommentIcon from "@/assets/icons/add_comment.svg";
@@ -12,7 +13,7 @@ function AddComment() {
   return (
     <div className="add-comment">
       <div className="add-comment__image-wrapper">
-        <Avatar />
+        <Avatar image={userAvatar} />
       </div>
       <form className="add-comment__form">
         <label className="add-comment__label">join the conversation</label>
