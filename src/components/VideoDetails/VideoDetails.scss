@@ -1,3 +1,46 @@
 @use "@/styles/partials/variables" as *;
 @use "@/styles/partials/mixins" as *;
 @use "@/styles/partials/globals" as *;
+
+.video-player {
+  &__content {
+    padding: 0 1rem;
+  }
+  &__wrapper {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid $mercury;
+  }
+  &__header {
+    margin: 0;
+    @include typography($text-xl, 700, $bf-black, $text-xl, none, none);
+  }
+}
+
+.video-content {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid $mercury;
+    &--no-border {
+      border: none;
+    }
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include typography($text-rg, 400, $bf-black, $text-xl, none, none);
+    &--bold {
+      font-weight: 600;
+    }
+    &--light {
+      color: $silver;
+    }
+    &--icon {
+      display: flex;
+      align-items: center;
+      margin-right: 0.5rem;
+    }
+  }
+}
