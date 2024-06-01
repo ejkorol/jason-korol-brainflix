@@ -1,19 +1,14 @@
 @use "@/styles/partials/variables" as *;
 @use "@/styles/partials/mixins" as *;
 
-.header {
-  &__avatar {
-    order: 3;
-    height: 3.125rem; // 40px
-    width: 3.125rem; // 40px
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    &--placeholder {
-      background: $mercury;
-    }
-  }
-  @include respond-to-min($tablet) {
-    order: 4;
-  }
-}
+ .avatar {
+   order: 3;
+   height: 3.125rem; // 40px
+   width: 3.125rem; // 40px
+   object-fit: cover;
+   object-position: center;
+   border-radius: 50%;
+   &--placeholder {
+     background: $mercury;
+   }
+ }

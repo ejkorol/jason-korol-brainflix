@@ -11,4 +11,10 @@
     flex-wrap: nowrap;
     padding: 1rem 2rem;
   }
+  .avatar {
+    @include respond-to-min($tablet) {
+      order: 4;
+      margin-left: 1rem;
+    }
+  }
 }
