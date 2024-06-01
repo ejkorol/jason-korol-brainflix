@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
+    @include respond-to-min($tablet) {
+      margin: 0 15% 0 0;
+    }
   }
   &__logo {
     height: 2rem;

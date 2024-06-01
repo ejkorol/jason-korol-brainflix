@@ -7,4 +7,8 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 1rem;
+  @include respond-to-min($tablet) {
+    flex-wrap: nowrap;
+    padding: 1rem 2rem;
+  }
 }
