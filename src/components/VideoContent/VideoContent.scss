@@ -5,7 +5,7 @@
 .video-content {
   @include respond-to-min($desktop) {
     display: flex;
-    max-width: 1280px;
+    max-width: 80rem;
     margin: auto;
   }
   &__left {
