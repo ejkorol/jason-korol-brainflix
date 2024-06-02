@@ -6,7 +6,7 @@ import AddComment from "@/components/AddComment/AddComment";
 import Comment from "@/components/Comment/Comment";
 
 function createComment(comment) {
-  return <Comment name={comment.name} timestamp={comment.timestamp} content={comment.comment} />
+  return <Comment key={comment.id} name={comment.name} timestamp={comment.timestamp} content={comment.comment} />
 };
 
 function VideoComments(props) {
