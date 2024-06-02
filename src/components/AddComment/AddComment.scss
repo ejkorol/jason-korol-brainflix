@@ -4,10 +4,32 @@
 
 .add-comment {
   display: flex;
+  @include respond-to-min($tablet) {
+    align-items: flex-end;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    &--textarea {
+      @include respond-to-min($tablet) {
+        flex-grow: 1;
+      }
+    }
+    &--button {
+      @include respond-to-min($tablet) {
+        align-self: flex-end;
+        margin-left: 1rem;
+        width: 9.375rem;
+      }
+    }
+  }
   &__form {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    @include respond-to-min($tablet) {
+      flex-direction: row;
+    }
   }
   &__image-wrapper {
     display: flex;
@@ -30,6 +52,10 @@
     }
     &:focus {
       border: 2px solid $bf-blue;
+    }
+    @include respond-to-min($tablet) {
+      height: 3rem;
+      box-sizing: border-box;
     }
   }
 }

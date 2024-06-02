@@ -16,9 +16,13 @@ function AddComment() {
         <Avatar image={userAvatar} />
       </div>
       <form className="add-comment__form">
-        <label className="add-comment__label">join the conversation</label>
-        <textarea className="add-comment__textarea" placeholder="Add a new comment" rows="5"></textarea>
-        <Button icon={addCommentIcon} text="comment" />
+        <div className="add-comment__wrapper add-comment__wrapper--textarea">
+          <label className="add-comment__label">join the conversation</label>
+          <textarea className="add-comment__textarea" placeholder="Add a new comment"></textarea>
+        </div>
+        <div className="add-comment__wrapper add-comment__wrapper--button">
+          <Button icon={addCommentIcon} text="comment" />
+        </div>
       </form>
     </div>
   )
