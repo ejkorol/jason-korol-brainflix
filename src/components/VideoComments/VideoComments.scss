@@ -5,7 +5,7 @@
 .video-comments {
   padding: 1rem;
   @include respond-to-min($tablet) {
-    padding: 2rem;
+    padding: 1rem 2rem;
   }
   @include respond-to-min($desktop) {
     padding: 0;
@@ -15,6 +15,9 @@
     @include typography($text-med, 600, $bf-black, $text-rg, none, capitalize);
     @include respond-to-min($tablet) {
       @include typography($text-rg, 600, $bf-black, $text-rg, none, capitalize);
+    }
+    @include respond-to-min($desktop) {
+      margin-top: 1rem;
     }
     &--bold {
       font-weight: 600;

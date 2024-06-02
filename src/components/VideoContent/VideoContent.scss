@@ -15,7 +15,7 @@
   &__right {
     @include respond-to-min($desktop) {
       width: 60%;
-      padding: 1rem 2rem 0 2rem;
+      padding: 2rem 2rem 0 2rem;
     }
   }
 }
