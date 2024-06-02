@@ -7,6 +7,9 @@
   @include respond-to-min($tablet) {
     padding: 2rem;
   }
+  @include respond-to-min($desktop) {
+    padding: 0;
+  }
   &__text {
     @include typography($text-rg, 600, $bf-black, $text-rg, none, capitalize);
     &--bold {
