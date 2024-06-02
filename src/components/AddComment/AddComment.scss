@@ -4,6 +4,8 @@
 
 .add-comment {
   display: flex;
+  border-bottom: 1px solid $mercury;
+  padding-bottom: 2rem;
   @include respond-to-min($tablet) {
     align-items: flex-end;
   }
