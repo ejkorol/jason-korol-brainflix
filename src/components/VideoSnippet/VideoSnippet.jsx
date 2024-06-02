@@ -1,9 +1,9 @@
 /* STYLES */
 import "./VideoSnippet.scss";
 
-function VideoSnippet({ image, title, author }) {
+function VideoSnippet({ image, title, author, onClick }) {
   return (
-    <article className="video-snippet">
+    <article className="video-snippet" onClick={onClick}>
       <div className="video-snippet__image-wrapper">
         <img className="video-snippet__image" src={image} alt={title} />
       </div>
