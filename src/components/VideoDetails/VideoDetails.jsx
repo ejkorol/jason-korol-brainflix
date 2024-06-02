@@ -5,18 +5,18 @@ import "./VideoDetails.scss";
 import heartIcon from "@/assets/icons/likes.svg";
 import eyeIcon from "@/assets/icons/views.svg";
 
-function VideoDetails () {
+function VideoDetails (props) {
   return (
     <>
       <div className="video-details__title">
-        <h1 className="video-details__header">The Future of Artifical Intelligence</h1>
+        <h1 className="video-details__header">{props.video.title}</h1>
       </div>
 
       <div className="video-details__content">
         <div className="video-details__wrapper">
           <div className="video-details__author">
-            <p className="video-details__text video-details__text--bold">By Aiden Thompson</p>
-            <p className="video-details__text video-details__text--light">8/8/2023</p>
+            <p className="video-details__text video-details__text--bold">{props.video.channel}</p>
+            <p className="video-details__text video-details__text--light">{props.video.timestamp}</p>
           </div>
 
           <div className="video-details__info">
@@ -24,20 +24,20 @@ function VideoDetails () {
               <span className="video-details__text--icon">
                 <img src={heartIcon} alt="likes icon" />
               </span>
-              980,544
+              {props.video.likes}
             </p>
 
             <p className="video-details__text video-details__text--light">
               <span className="video-details__text--icon">
                 <img src={eyeIcon} alt="views icon" />
               </span>
-              980,544
+              {props.video.views}
             </p>
           </div>
         </div>
 
         <div className="video-details__wrapper video-details__wrapper--no-border">
-          <p className="video-details__text">Explore the cutting-edge developments and predictions for Artificial Intelligence in the coming years. From revolutionary breakthroughs in machine learning to the ethical considerations influencing AI advancements, this exploration transcends the boundaries of mere speculation. Join us on a journey that navigates the intricate interplay between innovation, ethics, and the ever-evolving tech frontier.</p>
+          <p className="video-details__text">{props.video.description}</p>
         </div>
       </div>
     </>

@@ -4,7 +4,7 @@ import "./Comment.scss";
 /* COMPONENTS */
 import Avatar from "@/components/Avatar/Avatar";
 
-function Comment() {
+function Comment(props) {
   return (
     <article className="comment">
       <div className="comment__image-wrapper">
@@ -12,11 +12,11 @@ function Comment() {
       </div>
       <div className="comment__content">
         <div className="comment__top">
-          <p className="comment__text comment__text--bold">Jesus C</p>
-          <p className="comment__text comment__text--light">8/11/2022</p>
+          <p className="comment__text comment__text--bold">{props.name}</p>
+          <p className="comment__text comment__text--light">{props.timestamp}</p>
         </div>
         <div className="comment__body">
-          <p className="comment__text">Every we stray further from gods light. Every we stray further from gods light. Every we stray further from gods light. Every we stray further from gods light.</p>
+          <p className="comment__text">{props.content}</p>
         </div>
       </div>
     </article>

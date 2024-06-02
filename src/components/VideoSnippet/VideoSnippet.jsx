@@ -1,15 +1,15 @@
 /* STYLES */
 import "./VideoSnippet.scss";
 
-function VideoSnippet() {
+function VideoSnippet({ image, title, author }) {
   return (
     <article className="video-snippet">
       <div className="video-snippet__image-wrapper">
-        <img className="video-snippet__image" src="https://unit-3-project-api-0a5620414506.herokuapp.com/images/image0.jpg" alt="image of this video" />
+        <img className="video-snippet__image" src={image} alt={title} />
       </div>
       <div className="video-snippet__content">
-        <h3 className="video-snippet__text video-snippet__text--bold">Exploring Cities of Europe</h3>
-        <p className="video-snippet__text">Ryan Gosling</p>
+        <h3 className="video-snippet__text video-snippet__text--bold">{title}</h3>
+        <p className="video-snippet__text">{author}</p>
       </div>
     </article>
   )
