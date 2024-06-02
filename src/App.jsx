@@ -13,7 +13,10 @@ import VideoContent from "@/components/VideoContent/VideoContent";
 function App() {
 
   const [video, setVideo] = useState(videoData[0]);
-  const [videoList, setVideoList] = useState(videoData);
+
+  const videoList = videoData.filter((vid) => {
+    return vid.id !== video.id
+  });
 
   return (
     <>
