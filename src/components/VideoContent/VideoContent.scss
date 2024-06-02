@@ -8,13 +8,13 @@
   }
   &__left {
     @include respond-to-min($desktop) {
+      width: 60%;
       border-right: 1px solid $mercury;
       padding: 2rem 0 0 4rem;
     }
   }
   &__right {
     @include respond-to-min($desktop) {
-      width: 60%;
       padding: 2rem 2rem 0 2rem;
     }
   }
