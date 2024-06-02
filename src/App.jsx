@@ -19,7 +19,7 @@ function App() {
     <>
       <NavBar />
       <VideoPlayer video={video} />
-      <VideoContent video={video} videoList={videoList} setVideo={setVideoList}/>
+      <VideoContent video={video} videoList={videoList} setVideo={setVideo}/>
     </>
   )
 }
