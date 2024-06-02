@@ -1,3 +1,8 @@
+/* LOGIC */
+import { useState } from "react";
+import videoData from "@/data/video-details.json";
+
+/* STYLES */
 import './App.scss'
 
 /* COMPONENTS */
@@ -7,11 +12,14 @@ import VideoContent from "@/components/VideoContent/VideoContent";
 
 function App() {
 
+  const [video, setVideo] = useState(videoData[0]);
+  const [videoList, setVideoList] = useState(videoData);
+
   return (
     <>
       <NavBar />
-      <VideoPlayer />
-      <VideoContent />
+      <VideoPlayer video={video} />
+      <VideoContent video={video} videoList={videoList} />
     </>
   )
 }
