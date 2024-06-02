@@ -5,6 +5,9 @@
 .video-player {
   &__content {
     padding: 0 1rem;
+    @include respond-to-min($tablet) {
+      padding: 0 2rem;
+    }
   }
   &__wrapper {
     padding: 1.5rem 0;

@@ -4,6 +4,9 @@
 
 .video-comments {
   padding: 1rem;
+  @include respond-to-min($tablet) {
+    padding: 2rem;
+  }
   &__text {
     @include typography($text-rg, 600, $bf-black, $text-rg, none, capitalize);
     &--bold {

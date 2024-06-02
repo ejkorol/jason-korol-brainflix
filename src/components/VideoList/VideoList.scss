@@ -4,6 +4,9 @@
 
 .video-list {
   padding: 1rem 1rem 2.5rem 1rem;
+  @include respond-to-min($tablet) {
+    padding: 1rem 2rem 2.5rem 2rem;
+  }
   &__header {
     @include typography($text-rg, 600, $silver, $text-rg, none, uppercase);
   }
