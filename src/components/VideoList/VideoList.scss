@@ -8,6 +8,7 @@
     padding: 1rem 2rem 2.5rem 2rem;
   }
   &__header {
+    margin: 1rem 0 2rem 0;
     @include typography($text-rg, 600, $silver, $text-rg, none, uppercase);
   }
 }
