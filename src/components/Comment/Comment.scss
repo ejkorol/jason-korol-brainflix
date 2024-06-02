@@ -8,6 +8,9 @@
   border-top: 1px solid $mercury;
   border-bottom: 1px solid $mercury;
   padding: 1rem 0;
+  @include respond-to-min($desktop) {
+    padding: 1.5rem 2rem 1.5rem 0;
+  }
   &__image-wrapper {
     margin-right: 1rem;
   }
