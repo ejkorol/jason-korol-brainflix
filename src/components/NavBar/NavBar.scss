@@ -11,6 +11,9 @@
     flex-wrap: nowrap;
     padding: 1rem 2rem;
   }
+  @include respond-to-min($desktop) {
+    padding: 1rem 8rem;
+  }
   .avatar {
     @include respond-to-min($tablet) {
       order: 4;
