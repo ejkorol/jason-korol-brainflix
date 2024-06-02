@@ -2,48 +2,7 @@
 @use "@/styles/partials/mixins" as *;
 @use "@/styles/partials/globals" as *;
 
-.video-player {
-  &__content {
-    padding: 0 1rem;
-    @include respond-to-min($tablet) {
-      padding: 0 2rem;
-    }
-  }
-  &__wrapper {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid $mercury;
-    @include respond-to-min($tablet) {
-      border-bottom: none;
-    }
-  }
-  &__header {
-    margin: 0;
-    @include typography($text-xl, 700, $bf-black, $text-xl, none, none);
-  }
-}
-
-.video-content {
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid $mercury;
-    &--no-border {
-      border: none;
-    }
-  }
-  &__author {
-    @include respond-to-min($tablet) {
-      display: flex;
-      gap: 2rem;
-    }
-  }
-  &__info {
-    @include respond-to-min($tablet) {
-      display: flex;
-      gap: 2rem;
-    }
-  }
+.video-details {
   &__text {
     margin: 0;
     display: flex;
@@ -60,6 +19,64 @@
       display: flex;
       align-items: center;
       margin-right: 0.5rem;
+    }
+  }
+  &__title {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid $mercury;
+    @include respond-to-min($tablet) {
+      padding: 1.5rem 2rem;
+      border-bottom: none;
+    }
+    @include respond-to-min($desktop) {
+      padding: 0;
+    }
+  }
+  &__header {
+    margin: 0;
+    @include typography($text-xl, 700, $bf-black, $text-xl, none, none);
+  }
+  &__content {
+    padding: 0 1rem;
+    @include respond-to-min($tablet) {
+      padding: 0 2rem;
+    }
+    @include respond-to-min($desktop) {
+      padding: 0rem;
+    }
+  }
+  &__wrapper {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid $mercury;
+    @include respond-to-min($tablet) {
+      border-bottom: none;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid $mercury;
+    @include respond-to-min($desktop) {
+      padding-right: 2rem;
+    }
+    &--no-border {
+      border: none;
+    }
+  }
+  &__author {
+    @include respond-to-min($tablet) {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+  &__info {
+    @include respond-to-min($tablet) {
+      display: flex;
+      gap: 2rem;
+    }
+    @include respond-to-min($desktop) {
+      padding-right: 2rem;
     }
   }
 }
