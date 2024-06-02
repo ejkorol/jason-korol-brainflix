@@ -28,7 +28,10 @@
   }
   &__text {
     margin: 0;
-    @include typography($text-rg, 400, $bf-black, $text-xl, none, none);
+    @include typography($text-med, 400, $bf-black, $text-xl, none, none);
+    @include respond-to-min($tablet) {
+      @include typography($text-rg, 400, $bf-black, $text-xl, none, none);
+    }
     &--bold {
       font-weight: 600;
     }

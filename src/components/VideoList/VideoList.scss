@@ -3,7 +3,7 @@
 @use "@/styles/partials/globals" as *;
 
 .video-list {
-  padding: 1rem 1rem 2.5rem 1rem;
+  padding: 0.5rem 1rem 2.5rem 1rem;
   @include respond-to-min($tablet) {
     padding: 1rem 2rem 2.5rem 2rem;
   }
@@ -11,7 +11,10 @@
     padding: 0;
   }
   &__header {
-    margin: 1rem 0 2rem 0;
-    @include typography($text-rg, 600, $silver, $text-rg, none, uppercase);
+    margin: 0rem 0 2rem 0;
+    @include typography($text-med, 600, $silver, $text-rg, none, uppercase);
+    @include respond-to-min($tablet) {
+      @include typography($text-rg, 600, $silver, $text-rg, none, uppercase);
+    }
   }
 }

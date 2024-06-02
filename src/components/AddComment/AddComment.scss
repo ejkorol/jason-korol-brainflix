@@ -40,7 +40,10 @@
     margin: 2rem 1rem 0 0;
   }
   &__label {
-    @include typography($text-rg, 600, $silver, $text-rg, none, uppercase);
+    @include typography($text-med, 600, $silver, $text-rg, none, uppercase);
+    @include respond-to-min($tablet) {
+      @include typography($text-rg, 600, $silver, $text-rg, none, uppercase);
+    }
     margin-bottom: 1rem;
   }
   &__textarea {
@@ -49,16 +52,21 @@
     border: 1px solid $mercury;
     padding: 0.5rem 0.75rem;
     outline: none;
-    @include typography($text-rg, 400, $bf-black, $text-rg, none, none);
-    &::placeholder {
+    height: 7rem;
+    @include typography($text-med, 400, $bf-black, $text-rg, none, none);
+    @include respond-to-min($tablet) {
       @include typography($text-rg, 400, $bf-black, $text-rg, none, none);
+      height: 3rem;
+      box-sizing: border-box;
+    }
+    &::placeholder {
+      @include typography($text-med, 400, $bf-black, $text-rg, none, none);
+      @include respond-to-min(tablet) {
+        @include typography($text-rg, 400, $bf-black, $text-rg, none, none);
+      }
     }
     &:focus {
       border: 2px solid $bf-blue;
-    }
-    @include respond-to-min($tablet) {
-      height: 3rem;
-      box-sizing: border-box;
     }
   }
 }
