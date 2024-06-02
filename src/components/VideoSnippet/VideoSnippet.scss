@@ -12,6 +12,9 @@
     @include respond-to-min($tablet) {
       width: 16.5%;
     }
+    @include respond-to-min($desktop) {
+      width: 33%;
+    }
   }
   &__image {
     width: 100%;

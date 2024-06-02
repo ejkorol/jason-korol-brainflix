@@ -12,7 +12,7 @@
     padding: 1rem 2rem;
   }
   @include respond-to-min($desktop) {
-    padding: 1rem 8rem;
+    padding: 1rem 4rem;
   }
   .avatar {
     @include respond-to-min($tablet) {

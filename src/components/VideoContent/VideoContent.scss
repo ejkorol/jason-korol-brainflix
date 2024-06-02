@@ -9,7 +9,7 @@
   &__left {
     @include respond-to-min($desktop) {
       border-right: 1px solid $mercury;
-      padding: 2rem 0 0 8rem;
+      padding: 2rem 0 0 4rem;
     }
   }
   &__right {
