@@ -5,12 +5,12 @@ import "./VideoList.scss";
 import VideoSnippet from "@/components/VideoSnippet/VideoSnippet";
 
 function createSnippet(video) {
-  return <VideoSnippet image={video.image} title={video.title} author={video.channel} />
+  return <VideoSnippet key={video.id} image={video.image} title={video.title} author={video.channel} />
 };
 
-function VideoList(props) {
+function VideoList({ videoList, setVideo }) {
 
-  const videos = props.videoList;
+  const videos = videoList;
 
   return (
     <section className="video-list">
