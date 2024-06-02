@@ -7,6 +7,9 @@
   @include respond-to-min($tablet) {
     padding: 1rem 2rem 2.5rem 2rem;
   }
+  @include respond-to-min($desktop) {
+    padding: 0;
+  }
   &__header {
     margin: 1rem 0 2rem 0;
     @include typography($text-rg, 600, $silver, $text-rg, none, uppercase);
