@@ -4,6 +4,10 @@
 
 .video-snippet {
   display: flex;
+  margin-bottom: 1rem;
+  @include respond-to-min($desktop) {
+    margin-bottom: 2rem;
+  }
   &__image-wrapper {
     width: 33%;
     display: flex;
