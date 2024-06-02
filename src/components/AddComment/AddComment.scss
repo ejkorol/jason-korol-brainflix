@@ -7,6 +7,9 @@
   @include respond-to-min($tablet) {
     align-items: flex-end;
   }
+  @include respond-to-min($desktop) {
+    padding-right: 2rem;
+  }
   &__wrapper {
     display: flex;
     flex-direction: column;
