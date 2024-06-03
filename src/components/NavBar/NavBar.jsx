@@ -1,5 +1,5 @@
 /* STYLES */
-import './NavBar.scss';
+import "./NavBar.scss";
 import userAvatar from "@/assets/images/Mohan-muruge.jpg"
 
 /* COMPONENTS */

@@ -7,8 +7,7 @@ import Avatar from "@/components/Avatar/Avatar";
 function Comment({ name, timestamp, content }) {
 
   function convertTimestamp(time) {
-    const date = new Date(time);
-    return date.toLocaleDateString('en-US');
+    return new Date(time).toLocaleDateString('en-US');
   };
 
   return (

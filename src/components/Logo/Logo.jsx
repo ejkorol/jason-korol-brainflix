@@ -1,3 +1,4 @@
+/* STYLES */
 import "./Logo.scss";
 
 /* ICONS */

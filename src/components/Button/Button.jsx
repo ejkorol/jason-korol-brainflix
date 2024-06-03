@@ -1,3 +1,4 @@
+/* STYLES */
 import "./Button.scss";
 
 function UploadButton({ icon, text }) {

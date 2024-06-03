@@ -3,7 +3,7 @@ import { useState } from "react";
 import videoData from "@/data/video-details.json";
 
 /* STYLES */
-import './App.scss'
+import "./App.scss";
 
 /* COMPONENTS */
 import NavBar from "@/components/NavBar/NavBar";

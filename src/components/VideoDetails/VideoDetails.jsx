@@ -8,8 +8,7 @@ import eyeIcon from "@/assets/icons/views.svg";
 function VideoDetails ({ video: { title, channel, timestamp, likes, views, description } }) {
 
   function convertTimestamp(time) {
-    const date = new Date(time);
-    return date.toLocaleDateString('en-US');
+    return new Date(time).toLocaleDateString('en-US');
   };
 
   return (
