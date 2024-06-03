@@ -5,6 +5,7 @@
 .video-snippet {
   display: flex;
   margin-bottom: 1rem;
+  cursor: pointer;
   @include respond-to-min($desktop) {
     margin-bottom: 2rem;
   }
