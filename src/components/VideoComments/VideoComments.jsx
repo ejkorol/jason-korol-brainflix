@@ -5,17 +5,15 @@ import "./VideoComments.scss";
 import AddComment from "@/components/AddComment/AddComment";
 import Comment from "@/components/Comment/Comment";
 
-function createComment(comment) {
-  return <Comment key={comment.id} name={comment.name} timestamp={comment.timestamp} content={comment.comment} />
-};
-
 function VideoComments({ comments }) {
 
   return (
     <section className="video-comments">
-      <p className="video-comments__text video-comments__text--bold">{comments.length} comments</p>
+      <p className="video-comments__text video-comments__text--bold">{comments.length === 1 ? `${comments.length} comment` : `${comments.length} comments`}</p>
       <AddComment />
-      {comments.map(createComment)}
+      {comments.map(comment => {
+        return <Comment key={comment.id} name={comment.name} timestamp={comment.timestamp} content={comment.comment} />
+      })}
     </section>
   )
 };

@@ -14,9 +14,7 @@ function App() {
 
   const [video, setVideo] = useState(videoData[0]);
 
-  const videoList = videoData.filter((vid) => {
-    return vid.id !== video.id
-  });
+  const videoList = videoData.filter(vid => vid.id !== video.id );
 
   return (
     <>
