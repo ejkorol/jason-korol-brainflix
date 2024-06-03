@@ -9,6 +9,9 @@ import UploadPage from "@/pages/UploadPage/UploadPage";
 import VideoPage from "@/pages/VideoPage/VideoPage";
 import NotFoundPage from "@/pages/NotFoundPage/NotFoundPage";
 
+/* COMPONENTS */
+import NavBar from "@/components/NavBar/NavBar";
+
 /* ROUTE CONFIG */
 const routes = [
   {
@@ -36,6 +39,7 @@ const routes = [
 function App() {
   return (
     <BrowserRouter>
+      <NavBar />
       <Routes>
         {routes.map((route) => <Route
           key={route.name}

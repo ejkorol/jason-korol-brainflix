@@ -6,7 +6,6 @@ import videoData from "@/data/video-details.json";
 import "./HomePage.scss";
 
 /* COMPONENTS */
-import NavBar from "@/components/NavBar/NavBar";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import VideoContent from "@/components/VideoContent/VideoContent";
 
@@ -18,7 +17,6 @@ function HomePage() {
 
   return (
     <>
-      <NavBar />
       <VideoPlayer video={video} />
       <VideoContent video={video} videoList={videoList} setVideo={setVideo}/>
     </>
