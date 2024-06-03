@@ -1,9 +1,9 @@
 /* STYLES */
 import "./Button.scss";
 
-function UploadButton({ icon, text }) {
+function UploadButton({ icon, text, role, onClick }) {
   return (
-    <button className="button">
+    <button role={role} className="button" onClick={onClick}>
       <span className="button__icon">
         <img src={icon}/>
       </span>
