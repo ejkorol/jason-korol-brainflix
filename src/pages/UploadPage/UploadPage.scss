@@ -1,3 +1,97 @@
 @use "@/styles/partials/variables" as *;
 @use "@/styles/partials/mixins" as *;
 @use "@/styles/partials/globals" as *;
+
+%label-base {
+  @include typography($text-xs, 600, $silver, $text-rg, none, uppercase);
+  @include respond-to-min($tablet) {
+    @include typography($text-sm, 600, $silver, $text-rg, none, uppercase);
+  }
+  margin-bottom: 0.5rem;
+}
+
+%input-base {
+  background-color: $alabaster;
+  border-radius: 0.25rem;
+  border: 1px solid $mercury;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  @include typography($text-med, 400, $bf-black, $text-rg, none, none);
+  @include respond-to-min($tablet) {
+    @include typography($text-rg, 400, $bf-black, $text-rg, none, none);
+    height: 3rem;
+    box-sizing: border-box;
+  }
+  &::placeholder {
+    @include typography($text-med, 400, $bf-black, $text-rg, none, none);
+    @include respond-to-min(tablet) {
+      @include typography($text-rg, 400, $bf-black, $text-rg, none, none);
+    }
+  }
+  &:focus {
+    outline: 2px solid $bf-blue;
+  }
+}
+
+/* MAIN */
+.upload {
+  &__container {
+    padding: 1rem;
+    border-top: 1px solid $mercury;
+  }
+  &__header {
+    margin: 0;
+    margin-top: 0.5rem;
+    @include typography($text-xl, 700, $bf-black, $text-xxl, none, none);
+    @include respond-to-min($tablet) {
+      @include typography($text-xxl, 700, $bf-black, $text-xxl, none, none);
+    }
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  &__label {
+    @extend %label-base;
+  }
+  &__image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* FORM */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  &__label {
+    @extend %label-base;
+  }
+  &__textarea {
+    @extend %input-base;
+    height: 7rem;
+  }
+  &__input {
+    @extend %input-base;
+    margin-bottom: 1rem;
+  }
+}
+
+/* FOOTER */
+.upload-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  &__cancel-button {
+    order: 2;
+  }
+  &__publish-button {
+    order: 1;
+  }
+}
