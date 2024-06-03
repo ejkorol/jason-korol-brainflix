@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 /* STYLES */
 import "./NavBar.scss";
@@ -13,13 +13,17 @@ import Avatar from "@/components/Avatar/Avatar";
 
 function NavBar() {
 
+  let navigate = useNavigate();
+
+  function handleNavigation() {
+    navigate('/upload');
+  };
+
   return (
     <header className="header">
-      <Link to="/">
-        <Logo />
-      </Link>
+      <Logo />
       <Search />
-      <Button icon={uploadIcon} text="upload" />
+      <Button icon={uploadIcon} role="link" text="upload" onClick={() => {handleNavigation()}} />
       <Avatar image={userAvatar} />
     </header>
   )
