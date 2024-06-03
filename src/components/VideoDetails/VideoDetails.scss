@@ -7,7 +7,7 @@
     margin: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     @include typography($text-med, 400, $bf-black, $text-xl, none, none);
     @include respond-to-min($tablet) {
       @include typography($text-rg, 400, $bf-black, $text-xl, none, none);
@@ -53,16 +53,12 @@
   }
   &__wrapper {
     padding: 1.5rem 0;
-    border-bottom: 1px solid $mercury;
-    @include respond-to-min($tablet) {
-      border-bottom: none;
-    }
-  }
-  &__wrapper {
     display: flex;
-    justify-content: space-between;
     padding: 0.75rem 0;
     border-bottom: 1px solid $mercury;
+    @include respond-to-min($tablet) {
+      justify-content: space-between;
+    }
     @include respond-to-min($desktop) {
       padding-right: 2rem;
     }
@@ -77,6 +73,7 @@
     }
   }
   &__info {
+    margin-left: 6rem;
     @include respond-to-min($tablet) {
       display: flex;
       gap: 2rem;
