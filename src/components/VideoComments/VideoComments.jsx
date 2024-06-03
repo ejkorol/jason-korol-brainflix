@@ -9,9 +9,7 @@ function createComment(comment) {
   return <Comment key={comment.id} name={comment.name} timestamp={comment.timestamp} content={comment.comment} />
 };
 
-function VideoComments(props) {
-
-  const comments = props.video.comments;
+function VideoComments({ comments }) {
 
   return (
     <section className="video-comments">

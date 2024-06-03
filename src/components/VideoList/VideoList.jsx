@@ -7,7 +7,6 @@ import VideoSnippet from "@/components/VideoSnippet/VideoSnippet";
 function VideoList({ videoList, setVideo }) {
 
   function handleVideoChange(video) {
-    console.log(video);
     setVideo(video);
   };
 

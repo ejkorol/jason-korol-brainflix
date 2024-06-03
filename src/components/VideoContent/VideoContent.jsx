@@ -12,7 +12,7 @@ function VideoContent ({ video, videoList, setVideo }) {
     <section className="video-content">
       <div className="video-content__left">
         <VideoDetails video={video} />
-        <VideoComments video={video} />
+        <VideoComments comments={video.comments} />
       </div>
       <div className="video-content__right">
         <VideoList videoList={videoList} setVideo={setVideo} /> 

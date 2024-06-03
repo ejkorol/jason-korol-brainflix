@@ -5,18 +5,24 @@ import "./VideoDetails.scss";
 import heartIcon from "@/assets/icons/likes.svg";
 import eyeIcon from "@/assets/icons/views.svg";
 
-function VideoDetails (props) {
+function VideoDetails ({ video: { title, channel, timestamp, likes, views, description } }) {
+
+  function convertTimestamp(time) {
+    const date = new Date(time);
+    return date.toLocaleDateString('en-US');
+  };
+
   return (
     <>
       <div className="video-details__title">
-        <h1 className="video-details__header">{props.video.title}</h1>
+        <h1 className="video-details__header">{title}</h1>
       </div>
 
       <div className="video-details__content">
         <div className="video-details__wrapper">
           <div className="video-details__author">
-            <p className="video-details__text video-details__text--bold">{props.video.channel}</p>
-            <p className="video-details__text video-details__text--light">{props.video.timestamp}</p>
+            <p className="video-details__text video-details__text--bold">{channel}</p>
+            <p className="video-details__text video-details__text--light">{convertTimestamp(timestamp)}</p>
           </div>
 
           <div className="video-details__info">
@@ -24,20 +30,20 @@ function VideoDetails (props) {
               <span className="video-details__text--icon">
                 <img src={heartIcon} alt="likes icon" />
               </span>
-              {props.video.likes}
+              {likes}
             </p>
 
             <p className="video-details__text video-details__text--light">
               <span className="video-details__text--icon">
                 <img src={eyeIcon} alt="views icon" />
               </span>
-              {props.video.views}
+              {views}
             </p>
           </div>
         </div>
 
         <div className="video-details__wrapper video-details__wrapper--no-border">
-          <p className="video-details__text">{props.video.description}</p>
+          <p className="video-details__text">{description}</p>
         </div>
       </div>
     </>
