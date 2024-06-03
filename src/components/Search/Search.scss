@@ -15,10 +15,10 @@
     border: solid 0.063rem $mercury;
     border-radius: 0.25rem;
     outline: none;
+    @include typography($text-sm, 400, $bf-black, $text-sm, none, capitalize);
     &:focus {
       outline: 2px solid $bf-blue;
     }
-    @include typography($text-sm, 400, $bf-black, $text-sm, none, capitalize);
     &::placeholder {
       @include typography($text-sm, 400, $bf-black, $text-sm, none, capitalize);
     }
