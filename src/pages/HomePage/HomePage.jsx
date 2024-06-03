@@ -3,14 +3,14 @@ import { useState } from "react";
 import videoData from "@/data/video-details.json";
 
 /* STYLES */
-import "./Home.scss";
+import "./HomePage.scss";
 
 /* COMPONENTS */
 import NavBar from "@/components/NavBar/NavBar";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import VideoContent from "@/components/VideoContent/VideoContent";
 
-function Home() {
+function HomePage() {
 
   const [video, setVideo] = useState(videoData[0]);
 
@@ -25,4 +25,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default HomePage;
