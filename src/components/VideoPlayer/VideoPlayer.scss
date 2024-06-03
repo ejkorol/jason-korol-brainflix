@@ -3,7 +3,12 @@
 @use "@/styles/partials/globals" as *;
 
 .video-player {
+  background-color: $bf-dark-black;
   &__video {
     width: 100%;
+    aspect-ratio: 16/9;
+    @include respond-to-min($desktop) {
+      height: 80vh;
+    }
   }
 }
