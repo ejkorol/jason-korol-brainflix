@@ -37,7 +37,7 @@
   }
   &__header {
     margin: 0;
-    @include typography($text-xl, 700, $bf-black, $text-xl, none, none);
+    @include typography($text-xl, 700, $bf-black, $text-xxl, none, none);
     @include respond-to-min($tablet) {
       @include typography($text-xxl, 700, $bf-black, $text-xxl, none, none);
     }
@@ -52,9 +52,8 @@
     }
   }
   &__wrapper {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     display: flex;
-    padding: 0.75rem 0;
     border-bottom: 1px solid $mercury;
     @include respond-to-min($tablet) {
       justify-content: space-between;
