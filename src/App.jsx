@@ -1,26 +1,16 @@
-/* LOGIC */
-import { useState } from "react";
-import videoData from "@/data/video-details.json";
-
-/* STYLES */
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 
-/* COMPONENTS */
-import NavBar from "@/components/NavBar/NavBar";
-import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
-import VideoContent from "@/components/VideoContent/VideoContent";
+import Home from "@/pages/Home/Home";
 
 function App() {
-
-  const [video, setVideo] = useState(videoData[0]);
-
-  const videoList = videoData.filter(vid => vid.id !== video.id );
-
   return (
     <>
-      <NavBar />
-      <VideoPlayer video={video} />
-      <VideoContent video={video} videoList={videoList} setVideo={setVideo}/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
