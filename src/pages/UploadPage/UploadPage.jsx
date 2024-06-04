@@ -32,11 +32,13 @@ function UploadPage() {
       </div>
 
       <div className="upload-footer">
-        <div className="upload-footer__cancel-button">
-          <Button role="button" text="cancel" variant="light" />
-        </div>
-        <div className="upload-footer__publish-button">
-          <Button icon={publishIcon} role="button" text="publish" />
+        <div className="upload-footer__container">
+          <div className="upload-footer__cancel-button">
+            <Button role="button" text="cancel" variant="light" />
+          </div>
+          <div className="upload-footer__publish-button">
+            <Button icon={publishIcon} role="button" text="publish" />
+          </div>
         </div>
       </div>
 
