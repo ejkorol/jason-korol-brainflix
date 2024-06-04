@@ -37,11 +37,20 @@
 
 /* MAIN */
 .upload {
+  @include respond-to-min($desktop) {
+    border-top: 1px solid $mercury;
+  }
   &__container {
     padding: 1rem;
     border-top: 1px solid $mercury;
     @include respond-to-min($tablet) {
       padding: 2rem;
+    }
+    @include respond-to-min($desktop) {
+      padding: 2rem 4rem 0 4rem;
+      max-width: 80rem;
+      margin: auto;
+      border-top: none;
     }
   }
   &__header {
@@ -52,6 +61,16 @@
       @include typography($text-xxl, 700, $bf-black, $text-xxl, none, none);
     }
   }
+  &__wrapper {
+    @include respond-to-min($desktop) {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid $mercury;
+      height: 15rem;
+    }
+  }
   &__left {
     display: flex;
     flex-direction: column;
@@ -60,9 +79,27 @@
       border-top: 1px solid $mercury;
       padding-top: 2rem;
     }
+    @include respond-to-min($desktop) {
+      border-top: none;
+      margin-top: 0;
+      padding-top: 0;
+      width: 33%;
+    }
+  }
+  &__right {
+    flex-grow: 1;
   }
   &__label {
     @extend %label-base;
+    @include respond-to-min($desktop) {
+      width: fit-content;
+    }
+  }
+  &__image-wrapper {
+    @include respond-to-min($desktop) {
+      height: 100%;
+      overflow: hidden;
+    }
   }
   &__image {
     width: 100%;
@@ -75,6 +112,11 @@
       width: 50%;
       margin-bottom: 1.5rem;
     }
+    @include respond-to-min($desktop) {
+      margin-bottom: 0;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
@@ -82,12 +124,18 @@
 .upload-form {
   display: flex;
   flex-direction: column;
+  @include respond-to-min($desktop) {
+    height: 100%;
+  }
   &__label {
     @extend %label-base;
   }
   &__textarea {
     @extend %input-base;
     height: 7rem;
+    @include respond-to-min($desktop) {
+      height: 100%;
+    }
   }
   &__input {
     @extend %input-base;
@@ -103,6 +151,11 @@
   padding: 1rem;
   @include respond-to-min($tablet) {
     padding: 2rem;
+  }
+  @include respond-to-min($desktop) {
+    padding: 2rem 4rem;
+    max-width: 80rem;
+    margin: auto;
   }
   &__container {
     display: flex;

@@ -13,21 +13,25 @@ function UploadPage() {
 
         <h1 className="upload__header">Upload Video</h1>
 
-        <div className="upload__left">
-          <label className="upload__label">video thumbnail</label>
-          <img className="upload__image" src="https://i.pinimg.com/736x/32/7e/db/327edb9a15b304efc264668ada03f725.jpg" alt="work hard everyday, make few fucking money" />
-        </div>
+        <div className="upload__wrapper">
+          <div className="upload__left">
+            <label className="upload__label">video thumbnail</label>
+            <div className="upload__image-wrapper">
+              <img className="upload__image" src="https://i.pinimg.com/736x/32/7e/db/327edb9a15b304efc264668ada03f725.jpg" alt="work hard everyday, make few fucking money" />
+            </div>
+          </div>
 
-        <div className="upload__right">
+          <div className="upload__right">
 
-          <form className="upload-form">
-            <label className="upload-form__label">title your video</label>
-            <textarea className="upload-form__input" placeholder="Add a title to your video"></textarea>
+            <form className="upload-form">
+              <label className="upload-form__label">title your video</label>
+              <textarea className="upload-form__input" placeholder="Add a title to your video"></textarea>
 
-            <label className="upload-form__label">add a video description</label>
-            <textarea className="upload-form__textarea" placeholder="Add a description to your video"></textarea>
-          </form>
+              <label className="upload-form__label">add a video description</label>
+              <textarea className="upload-form__textarea" placeholder="Add a description to your video"></textarea>
+            </form>
 
+          </div>
         </div>
       </div>
 
