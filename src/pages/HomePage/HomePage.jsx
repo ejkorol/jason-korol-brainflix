@@ -1,6 +1,5 @@
-/* LOGIC */
-import { useState } from "react";
-import videoData from "@/data/video-details.json";
+/* CUSTOM HOOK */
+import useVideos from "@/utils/hooks/useVideos";
 
 /* STYLES */
 import "./HomePage.scss";
@@ -11,14 +10,16 @@ import VideoContent from "@/components/VideoContent/VideoContent";
 
 function HomePage() {
 
-  const [video, setVideo] = useState(videoData[0]);
+  const { video, videos, loading, error } = useVideos();
 
-  const videoList = videoData.filter(vid => vid.id !== video.id );
+  if (loading) return <p>loading...</p>
+
+  if (error) return <p>There was an error: {error}</p>
 
   return (
     <>
       <VideoPlayer video={video} />
-      <VideoContent video={video} videoList={videoList} setVideo={setVideo}/>
+      <VideoContent video={video} videoList={videos} />
     </>
   )
 }
