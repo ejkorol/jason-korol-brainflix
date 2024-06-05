@@ -12,10 +12,10 @@ function useVideos() {
 
     async function fetchVideos() {
       try {
-        const defaultVideo = await api.getDefaultVideo();
         const allVideos = await api.getVideoList();
-        const videoList = allVideos.filter(vid => vid.id !== defaultVideo.id);
-        setVideo(defaultVideo);
+        const video = await api.getVideo(allVideos[0].id);
+        const videoList = allVideos.filter(vid => vid.id !== video.id);
+        setVideo(video);
         setVideos(videoList)
       } catch (e) {
         setError(e.message);
@@ -26,7 +26,22 @@ function useVideos() {
     fetchVideos();
   }, [])
 
-  return { video, videos, loading, error };
+  async function getVideo(id) {
+    setLoading(true);
+    try {
+      const videos = await api.getVideoList();
+      const video = await api.getVideo(id);
+      const videoList = videos.filter(vid => vid.id !== video.id);
+      setVideo(video);
+      setVideos(videoList);
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setLoading(false);
+    };
+  };
+
+  return { video, videos, loading, error, getVideo };
 };
 
 export default useVideos;
