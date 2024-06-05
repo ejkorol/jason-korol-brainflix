@@ -9,6 +9,9 @@
   @include respond-to-min($desktop) {
     margin-bottom: 2rem;
   }
+  &__link {
+    text-decoration: none;
+  }
   &__image-wrapper {
     width: 9.375rem; // 150px
     min-width: 9.375rem; // 150px
