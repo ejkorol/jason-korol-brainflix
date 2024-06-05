@@ -1,39 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import routes from "@/router/index";
 
 /* STYLES */
 import "./App.scss";
 
-/* ROUTES */
-import HomePage from "@/pages/HomePage/HomePage";
-import UploadPage from "@/pages/UploadPage/UploadPage";
-import NotFoundPage from "@/pages/NotFoundPage/NotFoundPage";
-
 /* COMPONENTS */
 import NavBar from "@/components/NavBar/NavBar";
-
-/* ROUTE CONFIG */
-const routes = [
-  {
-    name: 'Home',
-    path: '/',
-    component: () => <HomePage />
-  },
-  {
-    name: 'Upload',
-    path: 'upload',
-    component: () => <UploadPage />
-  },
-  {
-    name: 'Video',
-    path: 'video/:id',
-    component: () => <HomePage />
-  },
-  {
-    name: '404',
-    path: '*',
-    component: () => <NotFoundPage />
-  }
-];
 
 function App() {
   return (
@@ -43,7 +15,7 @@ function App() {
         {routes.map((route) => <Route
           key={route.name}
           path={route.path}
-          element={route.component()}
+          element={<route.component />}
         />)}
       </Routes>
     </BrowserRouter>
