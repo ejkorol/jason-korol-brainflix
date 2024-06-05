@@ -1,10 +1,21 @@
-/* STYLES */
+import { useState } from "react";
 import "./Comment.scss";
 
-/* COMPONENTS */
 import Avatar from "@/components/Avatar/Avatar";
 
 function Comment({ name, timestamp, content }) {
+
+  const [time, setTime] = useState({
+    timestamp: timestamp,
+    verboiseTime: convertTimestamp(timestamp)
+  });
+
+  setInterval(() => {
+    setTime((prev) => ({
+      ...prev,
+      verboiseTime: convertTimestamp(prev.timestamp)
+    }));
+  }, 60000)
 
   /* TIMESTAMP LOGIC */
   function convertTimestamp(time) {
@@ -29,11 +40,10 @@ function Comment({ name, timestamp, content }) {
         if (elapsed > 1) {
           unitStr = unit + 's';
         };
-        return elapsed + ' ' + unitStr + ' ago';
+        return elapsed + ' ' + unitStr + ' ago'
       };
     };
-
-    return 'Just now';
+    return 'Just now'
   };
 
   return (
@@ -44,7 +54,7 @@ function Comment({ name, timestamp, content }) {
       <div className="comment__content">
         <div className="comment__top">
           <p className="comment__text comment__text--bold">{name}</p>
-          <p className="comment__text comment__text--light">{convertTimestamp(timestamp)}</p>
+          <p className="comment__text comment__text--light">{time.verboiseTime}</p>
         </div>
         <div className="comment__body">
           <p className="comment__text">{content}</p>
