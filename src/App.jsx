@@ -6,7 +6,6 @@ import "./App.scss";
 /* ROUTES */
 import HomePage from "@/pages/HomePage/HomePage";
 import UploadPage from "@/pages/UploadPage/UploadPage";
-import VideoPage from "@/pages/VideoPage/VideoPage";
 import NotFoundPage from "@/pages/NotFoundPage/NotFoundPage";
 
 /* COMPONENTS */
@@ -27,7 +26,7 @@ const routes = [
   {
     name: 'Video',
     path: 'video/:id',
-    component: () => <VideoPage />
+    component: () => <HomePage />
   },
   {
     name: '404',
