@@ -38,6 +38,17 @@ class Api {
     };
   };
 
+  /* POST COMMENT */
+  async postComment(id, payload) {
+    const route = `/videos/${id}/comments`;
+    try {
+      const res = await this.api.post(route, payload)
+      return res.data;
+    } catch (e) {
+      console.error(e);
+    };
+  };
+
 };
 
 const api = new Api(BASE_URL, API_KEY);
