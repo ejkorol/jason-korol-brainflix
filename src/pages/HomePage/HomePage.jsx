@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useVideos from "@/utils/hooks/useVideos";
 
 /* STYLES */
@@ -12,14 +12,13 @@ import VideoContent from "@/components/VideoContent/VideoContent";
 function HomePage() {
 
   const { id } = useParams();
-  const { video, videos, loading, error, getVideo } = useVideos();
-  const navigate = useNavigate();
+  const { video, videos, loading, error, getVideo, getDefaultVideo } = useVideos();
 
   useEffect(() => {
     if (id) {
       getVideo(id);
     } else {
-      navigate("/");
+      getDefaultVideo();
     };
   }, [id]);
 
