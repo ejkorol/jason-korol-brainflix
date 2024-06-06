@@ -22,16 +22,13 @@ function HomePage() {
     };
   }, [id]);
 
-  console.log(id);
-  console.log(videos);
-
   if (loading) return <p>loading...</p>
   if (error) return <p>There was an error: {error}</p>
 
   return (
     <>
       <VideoPlayer video={video} />
-      <VideoContent video={video} videoList={videos} />
+      <VideoContent video={video} videoList={videos} getVideo={getVideo} />
     </>
   )
 }

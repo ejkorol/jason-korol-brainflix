@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useParams } from "react-router-dom";
 import useComments from "@/utils/hooks/useComments";
 
 /* STYLES */
@@ -12,18 +13,21 @@ import addCommentIcon from "@/assets/icons/add_comment.svg";
 import Button from "@/components/Button/Button";
 import Avatar from "@/components/Avatar/Avatar";
 
-function AddComment() {
+function AddComment({ getVideo }) {
 
+  const { id } = useParams();
   const { postComment } = useComments();
   const commentRef = useRef(null);
 
   function handleSubmit(e) {
     e.preventDefault();
-    const payload = {
-      name: "Jason",
+    const userName = window.prompt("Enter your username: ", "");
+    const comment = {
+      name: userName,
       comment: commentRef.current.value
     };
-    postComment(payload);
+    postComment(comment);
+    getVideo(id);
   };
 
   return (
