@@ -8,6 +8,7 @@ import "./HomePage.scss";
 /* COMPONENTS */
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import VideoContent from "@/components/VideoContent/VideoContent";
+import LoadingPage from "@/pages/LoadingPage/LoadingPage";
 
 function HomePage() {
 
@@ -22,8 +23,8 @@ function HomePage() {
     };
   }, [id]);
 
-  if (loading) return <p>loading...</p>
-  if (error) return <p>There was an error: {error}</p>
+  if (loading) return <LoadingPage />;
+  if (error) return <p>There was an error: {error}</p>;
 
   return (
     <>
