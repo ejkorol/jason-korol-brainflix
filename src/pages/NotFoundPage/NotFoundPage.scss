@@ -1,0 +1,26 @@
+@use "@/styles/partials/variables" as *;
+@use "@/styles/partials/mixins" as *;
+@use "@/styles/partials/globals" as *;
+
+.not-found {
+  height: calc(100vh - 5.125rem);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+  }
+  &__image-wrapper {
+    width: 50%;
+  }
+  &__image {
+    width: 100%;
+    border-radius: 0.25rem;
+  }
+  &__header {
+    @include typography($text-xxl, 600, $bf-black, $text-xl, none, none);
+    margin-bottom: 2rem;
+  }
+}
