@@ -9,21 +9,7 @@ function useVideos() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-
-    async function fetchVideos() {
-      try {
-        const allVideos = await api.getVideoList();
-        const video = await api.getVideo(allVideos[0].id);
-        const videoList = allVideos.filter(vid => vid.id !== video.id);
-        setVideo(video);
-        setVideos(videoList)
-      } catch (e) {
-        setError(e.message);
-      } finally {
-        setLoading(false);
-      };
-    };
-    fetchVideos();
+    getDefaultVideo();
   }, [])
 
   async function getVideo(id) {
@@ -41,7 +27,22 @@ function useVideos() {
     };
   };
 
-  return { video, videos, loading, error, getVideo };
+  async function getDefaultVideo() {
+    setLoading(true);
+    try {
+      const allVideos = await api.getVideoList();
+      const video = await api.getVideo(allVideos[0].id);
+      const videoList = allVideos.filter(vid => vid.id !== video.id);
+      setVideo(video);
+      setVideos(videoList)
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setLoading(false);
+    };
+  }
+
+  return { video, videos, loading, error, getVideo, getDefaultVideo };
 };
 
 export default useVideos;
