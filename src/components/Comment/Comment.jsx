@@ -1,5 +1,6 @@
 /* LOGIC */
 import { useState } from "react";
+import useVerboiseTime from "@/utils/hooks/useVerboiseTime";
 
 /* STYLES */
 import "./Comment.scss";
@@ -9,46 +10,19 @@ import Avatar from "@/components/Avatar/Avatar";
 
 function Comment({ name, timestamp, content }) {
 
+  let verboiseTime = useVerboiseTime(timestamp);
+
   const [time, setTime] = useState({
     timestamp: timestamp,
-    verboiseTime: convertTimestamp(timestamp)
+    verboiseTime: verboiseTime
   });
 
   setInterval(() => {
     setTime((prev) => ({
       ...prev,
-      verboiseTime: convertTimestamp(prev.timestamp)
+      verboiseTime: useVerboiseTime(prev.timestamp)
     }));
   }, 60000)
-
-  /* TIMESTAMP LOGIC */
-  function convertTimestamp(time) {
-    const dif = Date.now() - time;
-    const seconds = Math.floor(dif / 1000);
-
-    const timeUnits = [
-      { unit: 'year', value: 31536000 },
-      { unit: 'month', value: 2592000 },
-      { unit: 'day', value: 86400 },
-      { unit: 'hour', value: 3600 },
-      { unit: 'minute', value: 60 }
-    ];
-
-    for (let i = 0; i < timeUnits.length; i++) {
-      const unit = timeUnits[i].unit;
-      const value = timeUnits[i].value;
-      const elapsed = Math.floor(seconds / value);
-
-      if (elapsed >= 1) {
-        let unitStr = unit;
-        if (elapsed > 1) {
-          unitStr = unit + 's';
-        };
-        return elapsed + ' ' + unitStr + ' ago'
-      };
-    };
-    return 'Just now'
-  };
 
   return (
     <article className="comment">
