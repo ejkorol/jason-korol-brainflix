@@ -22,7 +22,7 @@ function Comment({ name, timestamp, content }) {
       ...prev,
       verboiseTime: useVerboiseTime(prev.timestamp)
     }));
-  }, 60000)
+  }, 60000);
 
   return (
     <article className="comment">
