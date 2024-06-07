@@ -1,3 +1,4 @@
+/* LOGIC */
 import { useRef } from "react";
 import { useParams } from "react-router-dom";
 import useComments from "@/utils/hooks/useComments";
