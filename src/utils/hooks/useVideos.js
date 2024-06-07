@@ -5,15 +5,13 @@ function useVideos() {
 
   const [video, setVideo] = useState(null);
   const [videos, setVideos] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     getDefaultVideo();
-  }, [])
+  }, []);
 
   async function getVideo(id) {
-    setLoading(true);
     try {
       const videos = await api.getVideoList();
       const video = await api.getVideo(id);
@@ -22,13 +20,10 @@ function useVideos() {
       setVideos(videoList);
     } catch (e) {
       setError(e.message);
-    } finally {
-      setLoading(false);
     };
   };
 
   async function getDefaultVideo() {
-    setLoading(true);
     try {
       const allVideos = await api.getVideoList();
       const video = await api.getVideo(allVideos[0].id);
@@ -37,12 +32,10 @@ function useVideos() {
       setVideos(videoList)
     } catch (e) {
       setError(e.message);
-    } finally {
-      setLoading(false);
     };
-  }
+  };
 
-  return { video, videos, loading, error, getVideo, getDefaultVideo };
+  return { video, videos, error, getVideo, getDefaultVideo };
 };
 
 export default useVideos;
