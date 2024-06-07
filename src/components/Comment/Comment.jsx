@@ -1,6 +1,10 @@
+/* LOGIC */
 import { useState } from "react";
+
+/* STYLES */
 import "./Comment.scss";
 
+/* COMPONENTS */
 import Avatar from "@/components/Avatar/Avatar";
 
 function Comment({ name, timestamp, content }) {
@@ -61,7 +65,8 @@ function Comment({ name, timestamp, content }) {
         </div>
       </div>
     </article>
-  )
+  );
+
 };
 
 export default Comment;

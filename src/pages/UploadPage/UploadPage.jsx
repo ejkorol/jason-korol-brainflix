@@ -6,6 +6,7 @@ import publishIcon from "@/assets/icons/publish.svg";
 import Button from "@/components/Button/Button";
 
 function UploadPage() {
+
   return (
     <section className="upload">
 
@@ -47,7 +48,8 @@ function UploadPage() {
       </div>
 
     </section>
-  )
+  );
+
 };
 
 export default UploadPage;

@@ -1,8 +1,9 @@
+/* LOGIC */
 import { useNavigate } from "react-router-dom";
 
 /* STYLES */
 import "./NavBar.scss";
-import userAvatar from "@/assets/images/Mohan-muruge.jpg"
+import userAvatar from "@/assets/images/Mohan-muruge.jpg";
 import uploadIcon from "@/assets/icons/upload.svg";
 
 /* COMPONENTS */
@@ -26,7 +27,7 @@ function NavBar() {
       <Button icon={uploadIcon} role="link" text="upload" onClick={() => {handleNavigation()}} />
       <Avatar image={userAvatar} />
     </header>
-  )
+  );
 
 };
 

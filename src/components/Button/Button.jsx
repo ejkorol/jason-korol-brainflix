@@ -2,6 +2,7 @@
 import "./Button.scss";
 
 function UploadButton({ icon, text, role, onClick, variant }) {
+
   return (
     <button role={role} className={variant === 'light' ? 'button--light' : 'button' } onClick={onClick}>
       <span className="button__icon">
@@ -11,7 +12,8 @@ function UploadButton({ icon, text, role, onClick, variant }) {
         <p>{ text }</p>
       </span>
     </button>
-  )
+  );
+
 };
 
 export default UploadButton;

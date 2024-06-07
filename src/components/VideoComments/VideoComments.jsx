@@ -1,3 +1,4 @@
+/* LOGIC */
 import useQuickSort from "@/utils/hooks/useQuickSort";
 
 /* STYLES */
@@ -19,7 +20,8 @@ function VideoComments({ comments, getVideo }) {
         return <Comment key={comment.id} name={comment.name} timestamp={comment.timestamp} content={comment.comment} />
       })}
     </section>
-  )
+  );
+
 };
 
 export default VideoComments;

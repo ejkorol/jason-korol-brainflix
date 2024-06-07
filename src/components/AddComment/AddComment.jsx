@@ -5,7 +5,7 @@ import useComments from "@/utils/hooks/useComments";
 
 /* STYLES */
 import "./AddComment.scss";
-import userAvatar from "@/assets/images/Mohan-muruge.jpg"
+import userAvatar from "@/assets/images/Mohan-muruge.jpg";
 
 /* ICONS */
 import addCommentIcon from "@/assets/icons/add_comment.svg";
@@ -46,7 +46,8 @@ function AddComment({ getVideo }) {
         </div>
       </form>
     </div>
-  )
+  );
+
 };
 
 export default AddComment;

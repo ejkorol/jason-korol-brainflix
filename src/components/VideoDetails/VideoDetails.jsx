@@ -46,7 +46,8 @@ function VideoDetails ({ video: { title, channel, timestamp, likes, views, descr
         </div>
       </div>
     </>
-  )
+  );
+
 };
 
 export default VideoDetails;

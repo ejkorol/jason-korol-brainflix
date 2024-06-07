@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "./VideoSnippet.scss";
 
 function VideoSnippet({ image, title, author, id }) {
+
   return (
     <Link to={`/video/${id}`} className="video-snippet__link">
       <article className="video-snippet">
@@ -17,7 +18,8 @@ function VideoSnippet({ image, title, author, id }) {
         </div>
       </article>
     </Link>
-  )
+  );
+
 };
 
 export default VideoSnippet;

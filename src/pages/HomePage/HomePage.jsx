@@ -1,3 +1,4 @@
+/* LOGIC */
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useVideos from "@/utils/hooks/useVideos";
@@ -29,7 +30,8 @@ function HomePage() {
       { video && <VideoPlayer video={video} /> }
       { video && <VideoContent video={video} videoList={videos} getVideo={getVideo} /> }
     </>
-  )
-}
+  );
+
+};
 
 export default HomePage;

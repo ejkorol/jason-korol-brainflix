@@ -26,7 +26,8 @@ function NotFoundPage() {
         <Button role="link" text="take me home" onClick={handleNavigation} />
       </div>
     </section>
-  )
+  );
+
 };
 
 export default NotFoundPage;
