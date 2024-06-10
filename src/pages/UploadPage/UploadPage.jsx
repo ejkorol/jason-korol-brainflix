@@ -1,6 +1,7 @@
 /* STYLES */
 import "./UploadPage.scss";
 import publishIcon from "@/assets/icons/publish.svg";
+import videoPlaceholder from "@/assets/images/Upload-video-preview.jpg";
 
 /* COMPONENTS */
 import Button from "@/components/Button/Button";
@@ -18,7 +19,7 @@ function UploadPage() {
           <div className="upload__left">
             <label className="upload__label">video thumbnail</label>
             <div className="upload__image-wrapper">
-              <img className="upload__image" src="https://i.pinimg.com/736x/32/7e/db/327edb9a15b304efc264668ada03f725.jpg" alt="work hard everyday, make few fucking money" />
+              <img className="upload__image" src={videoPlaceholder} alt="work hard everyday, make few fucking money" />
             </div>
           </div>
 
