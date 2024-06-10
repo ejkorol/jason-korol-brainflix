@@ -70,5 +70,11 @@
     &:focus {
       outline: 2px solid $bf-blue;
     }
+    &--error {
+      outline: 2px solid $error;
+      &:focus {
+        outline: 2px solid $error;
+      }
+    }
   }
 }
