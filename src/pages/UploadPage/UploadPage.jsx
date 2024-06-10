@@ -2,11 +2,26 @@
 import "./UploadPage.scss";
 import publishIcon from "@/assets/icons/publish.svg";
 import videoPlaceholder from "@/assets/images/Upload-video-preview.jpg";
+import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
 
 /* COMPONENTS */
 import Button from "@/components/Button/Button";
 
 function UploadPage() {
+
+  const titleRef = useRef(null);
+  const descriptionRef = useRef(null);
+
+  const navigate = useNavigate();
+  function handleCancel() {
+    navigate("/");
+  };
+
+  function handleUpload() {
+    alert("Upload success!");
+    navigate("/");
+  };
 
   return (
     <section className="upload">
@@ -25,12 +40,12 @@ function UploadPage() {
 
           <div className="upload__right">
 
-            <form className="upload-form">
+            <form className="upload-form" onSubmit={handleUpload}>
               <label className="upload-form__label">title your video</label>
-              <textarea className="upload-form__input" placeholder="Add a title to your video"></textarea>
+              <textarea className="upload-form__input" ref={titleRef} required placeholder="Add a title to your video"></textarea>
 
               <label className="upload-form__label">add a video description</label>
-              <textarea className="upload-form__textarea" placeholder="Add a description to your video"></textarea>
+              <textarea className="upload-form__textarea" ref={descriptionRef} required placeholder="Add a description to your video"></textarea>
             </form>
 
           </div>
@@ -40,10 +55,10 @@ function UploadPage() {
       <div className="upload-footer">
         <div className="upload-footer__container">
           <div className="upload-footer__cancel-button">
-            <Button role="button" text="cancel" variant="light" />
+            <Button role="link" text="cancel" onClick={handleCancel} variant="light" />
           </div>
           <div className="upload-footer__publish-button">
-            <Button icon={publishIcon} role="button" text="publish" />
+            <Button icon={publishIcon} onClick={handleUpload} type="submit" role="submit" text="publish" />
           </div>
         </div>
       </div>
