@@ -23,7 +23,17 @@ class Api {
       const res = await this.api.get(route);
       return res.data;
     } catch (e) {
-      console.error(e)
+      console.error(e);
+    };
+  };
+
+  /* POST VIDEO */
+  async postVideo(payload) {
+    const route = "/videos";
+    try {
+      await this.api.post(route, payload);
+    } catch (e) {
+      console.error(e);
     };
   };
 

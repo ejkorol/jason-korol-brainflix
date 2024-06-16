@@ -35,7 +35,16 @@ function useVideos() {
     };
   };
 
-  return { video, videos, error, getVideo, getDefaultVideo };
+  async function postVideo(payload) {
+    try {
+      const res = await api.postVideo(payload);
+      return res.data;
+    } catch (e) {
+      setError(e.message);
+    };
+  };
+
+  return { video, videos, error, getVideo, getDefaultVideo, postVideo };
 };
 
 export default useVideos;
