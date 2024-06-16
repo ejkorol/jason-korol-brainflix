@@ -15,7 +15,23 @@ function useComments() {
     };
   };
 
-  return { comment, error, postComment };
+  async function likeComment(videoId, commentId) {
+    try {
+      await api.likeComment(videoId, commentId);
+    } catch (e) {
+      setError(e.message);
+    };
+  };
+
+  async function deleteComment(videoId, commentId) {
+    try {
+      await api.deleteComment(videoId, commentId);
+    } catch (e) {
+      setError(e.message);
+    };
+  };
+
+  return { comment, error, postComment, likeComment, deleteComment };
 };
 
 export default useComments;

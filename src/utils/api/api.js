@@ -59,6 +59,28 @@ class Api {
     };
   };
 
+  /* LIKE COMMENT */
+  async likeComment(videoId, commentId) {
+    const route = `/videos/${videoId}/comments/${commentId}`;
+    try {
+      const res = await this.api.patch(route);
+      return res.data;
+    } catch (e) {
+      console.error(e);
+    };
+  };
+
+  /* DELETE COMMENT */
+  async deleteComment(videoId, commentId) {
+    const route = `/videos/${videoId}/comments/${commentId}`;
+    try {
+      const res = await this.api.delete(route);
+      return res.data;
+    } catch (e) {
+      console.error(e);
+    };
+  };
+
 };
 
 const api = new Api(BASE_URL, API_KEY);
