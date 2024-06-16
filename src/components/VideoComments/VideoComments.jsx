@@ -17,7 +17,7 @@ function VideoComments({ video, comments, getVideo }) {
       <p className="video-comments__text video-comments__text--bold">{comments.length === 1 ? `${comments.length} comment` : `${comments.length} comments`}</p>
       <AddComment video={video} getVideo={getVideo} />
       {sortedComments.map(comment => {
-        return <Comment key={comment.id} name={comment.name} timestamp={comment.timestamp} content={comment.comment} />
+        return <Comment key={comment.id} videoId={video.id} commentId={comment.id} name={comment.name} timestamp={comment.timestamp} content={comment.comment} likes={comment.likes} getVideo={getVideo} />
       })}
     </section>
   );
