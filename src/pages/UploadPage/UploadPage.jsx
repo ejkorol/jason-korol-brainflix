@@ -55,7 +55,7 @@ function UploadPage() {
   };
 
   return (
-    <section className="upload">
+    <main className="upload">
 
       <div className="upload__container">
 
@@ -96,7 +96,7 @@ function UploadPage() {
         </div>
       </div>
 
-    </section>
+    </main>
   );
 
 };

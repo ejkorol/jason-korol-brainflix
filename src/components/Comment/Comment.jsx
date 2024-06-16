@@ -5,7 +5,6 @@ import useComments from "@/utils/hooks/useComments";
 
 /* STYLES */
 import "./Comment.scss";
-import heartIcon from "@/assets/icons/heart.svg";
 import thumbsUpIcon from "@/assets/icons/thumbs-up.svg";
 import trashIcon from "@/assets/icons/trash.svg";
 

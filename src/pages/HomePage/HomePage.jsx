@@ -26,10 +26,10 @@ function HomePage() {
   if (error) return <p>There was an error: {error}</p>;
 
   return (
-    <>
+    <main>
       { video && <VideoPlayer video={video} /> }
       { video && <VideoContent video={video} videoList={videos} getVideo={getVideo} /> }
-    </>
+    </main>
   );
 
 };
