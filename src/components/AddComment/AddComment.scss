@@ -4,7 +4,7 @@
 
 .add-comment {
   display: flex;
-  border-bottom: 1px solid $mercury;
+  border-bottom: 0.063rem solid $mercury;
   padding-bottom: 2rem;
   @include respond-to-min($tablet) {
     align-items: flex-end;
@@ -51,7 +51,7 @@
   &__textarea {
     background-color: $alabaster;
     border-radius: 0.25rem;
-    border: 1px solid $mercury;
+    border: 0.063rem solid $mercury;
     padding: 0.5rem 0.75rem;
     outline: none;
     height: 7rem;
@@ -68,12 +68,12 @@
       }
     }
     &:focus {
-      outline: 2px solid $bf-blue;
+      outline: 0.125rem solid $bf-blue;
     }
     &--error {
-      outline: 2px solid $error;
+      outline: 0.125rem solid $error;
       &:focus {
-        outline: 2px solid $error;
+        outline: 0.125rem solid $error;
       }
     }
   }

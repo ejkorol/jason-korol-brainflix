@@ -11,7 +11,7 @@
   &__left {
     @include respond-to-min($desktop) {
       width: 60%;
-      border-right: 1px solid $mercury;
+      border-right: 0.063rem solid $mercury;
       padding: 2rem 0 0 4rem;
     }
   }

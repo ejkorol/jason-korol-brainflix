@@ -4,8 +4,7 @@
 
 .comment {
   display: flex;
-  // border-top: 1px solid $mercury;
-  border-bottom: 1px solid $mercury;
+  border-bottom: 0.063rem solid $mercury;
   padding: 1rem 0;
   @include respond-to-min($desktop) {
     padding: 1.5rem 2rem 1.5rem 0;

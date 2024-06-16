@@ -17,7 +17,7 @@
     outline: none;
     @include typography($text-sm, 400, $bf-black, $text-sm, none, capitalize);
     &:focus {
-      outline: 2px solid $bf-blue;
+      outline: 0.125rem solid $bf-blue;
     }
     &::placeholder {
       @include typography($text-sm, 400, $bf-black, $text-sm, none, capitalize);
