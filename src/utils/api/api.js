@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
-const API_KEY = "60f458e4-0a5a-4961-ba43-73b0945485a8";
+const BASE_URL = import.meta.env.VITE_API_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 class Api {
 
